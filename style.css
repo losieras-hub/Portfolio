@@ -26,6 +26,13 @@ header img {
     height: auto;
 }
 
+#nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    
+}
+
 nav {
     background: var(--accent-color);
     padding: 15px;
