@@ -36,7 +36,7 @@ nav {
     background: var(--accent-color);
     padding: 15px;
     text-align: center;
-    border-radius: 15px
+    border-radius: 20px
 }
 
 nav ul {
@@ -88,22 +88,57 @@ section {
     background: var(--section-bg);
     margin-bottom: var(--standard-gap);
     padding: 25px;
-    border-radius: 15px;
 }
 
-#projects {
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(2, minmax(100px, auto));
-    gap: 1em;
-    background: var(--section-bg);
-    padding: 25px;
+@media (min-width: 600px) {
+    .intro-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: var(--standard-gap);
+    }
 
+    .intro-grid section {
+        margin-bottom: 0;
+    }
+}
+#"Please create a grid that puts the h1 and about sections next to each other. id like them to be next to eachother above 1000px and then have the about wrap below the h1 in a column layout on anything above 600px. please use @media quesries to handle the grid changes."
+
+@media (min-width: 600px) {
+    #projects {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2, minmax(100px, auto));
+        gap: 1em;
+        background: var(--section-bg);
+        padding: 25px;
+
+    }
+
+    #projects h2 {
+        grid-column: span 2 / span 2;
+    }
 }
 
-#projects h2 {
-    grid-column: span 2 / span 2;
+@media (min-width: 1000px) {
+    .intro-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    #projects {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2, minmax(100px, auto));
+        gap: 1em;
+        background: var(--section-bg);
+        padding: 25px;
+
+    }
+
+    #projects h2 {
+        grid-column: span 3 / span 3;
+    }
 }
+
 
 #projects article {
     margin: 20px;
