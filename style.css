@@ -30,7 +30,6 @@ header img {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    
 }
 
 nav {
@@ -71,6 +70,7 @@ h2 {
     padding-bottom: 8px;
 }
 
+
 h3 {
     color: #5c4033;
 }
@@ -92,8 +92,17 @@ section {
 }
 
 #projects {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2, minmax(100px, auto));
+    gap: 1em;
     background: var(--section-bg);
     padding: 25px;
+
+}
+
+#projects h2 {
+    grid-column: span 2 / span 2;
 }
 
 #projects article {
