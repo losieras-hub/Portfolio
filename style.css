@@ -101,7 +101,7 @@ section {
         margin-bottom: 0;
     }
 }
-#"Please create a grid that puts the h1 and about sections next to each other. id like them to be next to eachother above 1000px and then have the about wrap below the h1 in a column layout on anything above 600px. please use @media quesries to handle the grid changes."
+/* "Please create a grid that puts the h1 and about sections next to each other. id like them to be next to eachother above 1000px and then have the about wrap below the h1 in a column layout on anything above 600px. please use @media quesries to handle the grid changes." */
 
 @media (min-width: 600px) {
     #projects {
