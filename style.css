@@ -1,9 +1,25 @@
+
 :root {
     --primary-bg: #e3e3e3;
     --primary-text: #444444;
     --accent-color: burlywood;
     --section-bg: #f8f5f0;
     --standard-gap: 40px;
+    --heading-color: #8b4513;
+    --subheading-color: #5c4033;
+    --article-bg: white;
+    --blockquote-bg: #eeeeee;
+}
+
+body.dark-mode {
+    --primary-bg: #222222;
+    --primary-text: #eeeeee;
+    --accent-color: #b99a6b;
+    --section-bg: #333333;
+    --heading-color: #deb887;
+    --subheading-color: #d2b48c;
+    --article-bg: #444444;
+    --blockquote-bg: #3a3a3a;
 }
 
 body {
@@ -12,6 +28,7 @@ body {
     color: var(--primary-text);
     margin: 0;
     line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 header {
@@ -36,7 +53,7 @@ nav {
     background: var(--accent-color);
     padding: 15px;
     text-align: center;
-    border-radius: 20px
+    border-radius: 20px;
 }
 
 nav ul {
@@ -65,14 +82,13 @@ h1 {
 }
 
 h2 {
-    color: #8b4513;
+    color: var(--heading-color);
     border-bottom: 2px solid var(--accent-color);
     padding-bottom: 8px;
 }
 
-
 h3 {
-    color: #5c4033;
+    color: var(--subheading-color);
 }
 
 p {
@@ -101,7 +117,6 @@ section {
         margin-bottom: 0;
     }
 }
-/* "Please create a grid that puts the h1 and about sections next to each other. id like them to be next to eachother above 1000px and then have the about wrap below the h1 in a column layout on anything above 600px. please use @media quesries to handle the grid changes." */
 
 @media (min-width: 600px) {
     #projects {
@@ -111,7 +126,6 @@ section {
         gap: 1em;
         background: var(--section-bg);
         padding: 25px;
-
     }
 
     #projects h2 {
@@ -131,7 +145,6 @@ section {
         gap: 1em;
         background: var(--section-bg);
         padding: 25px;
-
     }
 
     #projects h2 {
@@ -139,11 +152,10 @@ section {
     }
 }
 
-
 #projects article {
     margin: 20px;
     padding: 20px;
-    background: white;
+    background: var(--article-bg);
     border-left: 5px solid red;
 }
 
@@ -154,7 +166,7 @@ article img {
 }
 
 main a {
-    color: #8b4513;
+    color: var(--heading-color);
 }
 
 main li {
@@ -162,7 +174,7 @@ main li {
 }
 
 blockquote {
-    background: #eeeeee;
+    background: var(--blockquote-bg);
     border-left: 4px solid var(--accent-color);
     padding: 15px;
 }
@@ -180,4 +192,21 @@ footer a {
 
 footer p {
     margin-bottom: 0;
+}
+/* "Please create a visual for my dark mode toggle button" */
+#theme-toggle {
+    background: #333333;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#theme-toggle:hover {
+    background: #555555;
+}
+
+body, section, article, nav, blockquote {
+    transition: background-color 0.3s, color 0.3s;
 }
